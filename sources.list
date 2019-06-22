@@ -1,0 +1,22 @@
+#sudo nano /etc/apt/sources.list
+#Add these lines:
+
+deb http://us.archive.ubuntu.com/ubuntu/ xenial main universe
+deb-src http://us.archive.ubuntu.com/ubuntu/ xenial main universe  
+
+#update your sources list using terminal 
+#sudo <gedit or any text editor> then /etc/apt/sources.list
+#then save it && terminal: sudo apt update: && when you encounter NO_PUBKEY error use the following command below.
+
+#  sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <PUBKEY>
+
+#the <PUBKEY> will be 6768FDF797F97F78D this long alpha-numeric variable.
+
+then after solving the error now 
+:: sudo apt update 
+
+
+now install everything required by the Libgraph:
+
+Warning! Use this data/Tutorial before proceeding to the next steps. 
+
