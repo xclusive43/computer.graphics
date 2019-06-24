@@ -3,16 +3,18 @@
 
 using namespace std;
 
-void boundary(int x,int y,int fillc,int boundarc)
+void boundary(int x,int y,int fillc,int boundaryc)
 {
      
-    if(getpixel(x,y)!=boundarc && getpixel(x,y)!= fillc)
+    if(getpixel(x,y)!=boundaryc && getpixel(x,y)!= fillc)
     {
         putpixel(x,y,fillc);
-        boundary(x+1,y,fillc,boundarc);
-        boundary(x,y+1,fillc,boundarc);
-        boundary(x-1,y,fillc,boundarc);
-        boundary(x,y-1,fillc,boundarc);
+        
+        boundary(x-1,y,fillc,boundaryc);
+        boundary(x,y-1,fillc,boundaryc);
+        boundary(x,y+1,fillc,boundaryc);
+        boundary(x+1,y,fillc,boundaryc);
+       
     }
 }
 int main()
